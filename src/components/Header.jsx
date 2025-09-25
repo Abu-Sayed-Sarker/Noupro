@@ -1,10 +1,11 @@
 import { ChevronLeft, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 export default function Header({ setSidebarOpen }) {
   const { pathname } = useLocation();
-  const { id } = useParams();
+  const { id, product } = useParams();
+  const navigate = useNavigate();
   const [sidebarHeader, setSidebarHeader] = useState({
     path: false,
     label: "",
@@ -23,6 +24,20 @@ export default function Header({ setSidebarOpen }) {
         return {
           path: false,
           label: "Company Management",
+          description:
+            "Oversee and manage company details, structure, and operations",
+        };
+      case pathname === `/company-management/${id}`:
+        return {
+          path: true,
+          label: "Company Profile",
+          description:
+            "Oversee and manage company details, structure, and operations",
+        };
+      case pathname === `/company-management/${id}/${product}`:
+        return {
+          path: true,
+          label: `Product: ${product}`,
           description:
             "Oversee and manage company details, structure, and operations",
         };
@@ -60,7 +75,7 @@ export default function Header({ setSidebarOpen }) {
   }, [pathname, id]);
 
   return (
-    <header className="bg-transparent sticky top-0 z-30">
+    <header className="backdrop-blur-md sticky top-0 z-30">
       <div className="flex items-center justify-between p-4">
         <div className="flex items-center space-x-4">
           <button
@@ -71,9 +86,13 @@ export default function Header({ setSidebarOpen }) {
           </button>
 
           {/* Search Bar */}
-          <div className="backdrop-blur-md">
+          <div className="">
             <div className="flex items-center gap-1">
-              {sidebarHeader?.path && <ChevronLeft size={28} />}
+              {sidebarHeader?.path && (
+                <button onClick={() => navigate(-1)}>
+                  <ChevronLeft size={28} />
+                </button>
+              )}
               <h1 className="text-2xl md:text-4xl font-semibold">
                 {sidebarHeader?.label}
               </h1>
