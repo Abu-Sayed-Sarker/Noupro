@@ -7,42 +7,40 @@ import UserManagement from "../Pages/User Management/UserManagement";
 import SubscriptionManagement from "../Pages/Subscription/SubscriptionManagement";
 import AdminManagement from "../Pages/Admin/AdminManagement";
 
-
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Dashboard />,
     errorElement: <h1>404</h1>,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <h1>Main</h1>,
       },
       {
-        path: '/company-management',
+        path: "/company-management",
         element: <h1>Company Management</h1>,
       },
       {
         path: "/users-management",
         element: <UserManagement />,
-
       },
       {
-        path: '/subscriptions',
+        path: "/subscriptions",
         element: <SubscriptionManagement />,
       },
       {
-        path: '/admin-management',
+        path: "/admin-management",
         element: <AdminManagement />,
       },
       {
         path: "/settings",
-        element: <h1>Settings</h1>,
+        element: <Settings />,
       },
     ],
   },
   {
-    path: '/register',
+    path: "/register",
     element: <h1>Register </h1>,
   },
 ]);
