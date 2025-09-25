@@ -1,42 +1,48 @@
 import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../Layouts/Dashboard";
+
 import Settings from "../Pages/Settings/Settings";
 import UserManagement from "../Pages/User Management/UserManagement";
 
+import SubscriptionManagement from "../Pages/Subscription/SubscriptionManagement";
+import AdminManagement from "../Pages/Admin/AdminManagement";
+
+
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Dashboard />,
     errorElement: <h1>404</h1>,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <h1>Main</h1>,
       },
       {
-        path: "/company-management",
+        path: '/company-management',
         element: <h1>Company Management</h1>,
       },
       {
         path: "/users-management",
         element: <UserManagement />,
+
       },
       {
-        path: "/subscriptions",
-        element: <h1>Subscriptions</h1>,
+        path: '/subscriptions',
+        element: <SubscriptionManagement />,
       },
       {
-        path: "/admin-management",
-        element: <h1>Admin Profile</h1>,
+        path: '/admin-management',
+        element: <AdminManagement />,
       },
       {
         path: "/settings",
-        element: <Settings />,
+        element: <h1>Settings</h1>,
       },
     ],
   },
   {
-    path: "/register",
+    path: '/register',
     element: <h1>Register </h1>,
   },
 ]);
