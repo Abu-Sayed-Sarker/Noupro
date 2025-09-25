@@ -124,9 +124,6 @@ export default function UserProfile() {
                   <th className="text-left py-3 px-4 font-medium text-gray-600 text-sm">
                     Phone num
                   </th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600 text-sm">
-                    Action
-                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -163,16 +160,6 @@ export default function UserProfile() {
                       <span className="text-sm text-gray-600">
                         {company.phone}
                       </span>
-                    </td>
-                    <td className="py-4 px-4">
-                      <div className="flex items-center space-x-2">
-                        <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-                          <Eye className="w-4 h-4 text-gray-600" />
-                        </button>
-                        <button className="p-2 hover:bg-red-50 rounded-lg transition-colors">
-                          <Trash2 className="w-4 h-4 text-red-500" />
-                        </button>
-                      </div>
                     </td>
                   </tr>
                 ))}

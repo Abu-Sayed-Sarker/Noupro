@@ -47,6 +47,12 @@ export default function Header({ setSidebarOpen }) {
           label: "User Management",
           description: "Manage users, roles, and access permissions",
         };
+      case pathname === `/users-management/${id}`:
+        return {
+          path: true,
+          label: "User Profile",
+          description: "Manage users, roles, and access permissions",
+        };
       case pathname === "/subscriptions":
         return {
           path: false,
