@@ -22,32 +22,33 @@ export default function Header({ setSidebarOpen }) {
       case pathname === "/company-management":
         return {
           path: false,
-          label: "Super Admin Dashboard",
-          description: "Manage business workspaces and monitor system overview",
+          label: "Company Management",
+          description:
+            "Oversee and manage company details, structure, and operations",
         };
       case pathname === "/users-management":
         return {
           path: false,
-          label: "Super Admin Dashboard",
-          description: "Manage business workspaces and monitor system overview",
+          label: "User Management",
+          description: "Manage users, roles, and access permissions",
         };
       case pathname === "/subscriptions":
         return {
           path: false,
-          label: "Super Admin Dashboard",
-          description: "Manage business workspaces and monitor system overview",
+          label: "Subscription Management",
+          description: "Track and manage subscription plans and billing",
         };
       case pathname === "/admin-management":
         return {
           path: false,
-          label: "Super Admin Dashboard",
-          description: "Manage business workspaces and monitor system overview",
+          label: "Admin Management",
+          description: "Control admin accounts and system privileges",
         };
       case pathname === "/settings":
         return {
           path: false,
-          label: "Super Admin Dashboard",
-          description: "Manage business workspaces and monitor system overview",
+          label: "Settings",
+          description: "Customize system preferences and configurations",
         };
       default:
         return { path: false, label: "", description: "" };
