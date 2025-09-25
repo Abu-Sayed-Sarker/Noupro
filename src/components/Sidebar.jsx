@@ -9,7 +9,7 @@ import {
   Banknote,
   Settings,
 } from "lucide-react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
   const rootPath = useLocation().pathname.split("/")[1];
   const sidebarItems = [
@@ -38,7 +38,14 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
       >
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           {/* logo of the website */}
-          <div className="w-32 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg animate-pulse" />
+          <Link
+            to="/"
+            className="flex items-center justify-center text-center w-full"
+          >
+            <h1 className="md:text-4xl text-2xl font-extrabold text-black text-center">
+              NOUPRO
+            </h1>
+          </Link>
           <button
             onClick={() => setSidebarOpen(false)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
