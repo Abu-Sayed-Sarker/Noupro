@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../Layouts/Dashboard";
+import Settings from "../Pages/Settings/Settings";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/settings",
-        element: <h1>Settings</h1>,
+        element: <Settings />,
       },
     ],
   },

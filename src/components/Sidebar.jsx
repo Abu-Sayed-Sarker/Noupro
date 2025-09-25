@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import {
   X,
-  Settings,
   Home,
-  BarChart3,
   Users,
-  FileText,
-  Calendar,
   Mail,
-  Search,
+  Building2,
+  UserCog,
+  Banknote,
+  Settings,
 } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
@@ -16,14 +15,18 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
   const sidebarItems = [
     { icon: Home, label: "Dashboard", path: "/" },
     {
-      icon: BarChart3,
+      icon: Building2,
       label: "Company Management",
       path: "/company-management",
     },
     { icon: Users, label: "User Management", path: "/users-management" },
-    { icon: FileText, label: "Subscription", path: "/subscriptions" },
-    { icon: Calendar, label: "Admin Management", path: "/admin-management" },
-    { icon: Mail, label: "Settings", path: "/settings" },
+    { icon: Banknote, label: "Subscription", path: "/subscriptions" },
+    {
+      icon: UserCog,
+      label: "Admin Management",
+      path: "/admin-management",
+    },
+    { icon: Settings, label: "Settings", path: "/settings" },
   ];
 
   return (
