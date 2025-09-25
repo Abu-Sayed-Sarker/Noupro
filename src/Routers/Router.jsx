@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../Layouts/Dashboard";
 import SubscriptionManagement from "../Pages/Subscription/SubscriptionManagement";
+import AdminManagement from "../Pages/Admin/AdminManagement";
 
 export const router = createBrowserRouter([
   {
