@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Poly: ["Poly", "serif"],
+        outfit: ["Outfit", "sans-serif"],
       },
     },
   },
