@@ -6,10 +6,10 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
+    navigate("/");
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
-    navigate("/");
   };
   return (
     <div className="flex w-full h-screen bg-black">

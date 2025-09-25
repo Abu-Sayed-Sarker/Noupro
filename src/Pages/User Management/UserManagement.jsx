@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Search, Eye, Trash2, ChevronLeft, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const UserManagement = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("Email");
   const [currentPage, setCurrentPage] = useState(1);
+  const navigate = useNavigate();
 
   const users = [
     {
@@ -126,6 +128,7 @@ const UserManagement = () => {
   };
 
   const handleView = (userId) => {
+    navigate(`/users-management/${userId}`);
     console.log("View user:", userId);
   };
 

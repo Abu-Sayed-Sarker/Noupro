@@ -90,10 +90,13 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
 
         {/* log out  */}
         <div className="absolute bottom-0 w-full p-4 border-t border-gray-200">
-          <button className="w-full flex items-center px-4 py-2 font-medium rounded-lg gap-2 hover:bg-gray-100 transition-colors">
+          <Link
+            to="/login"
+            className="w-full flex items-center px-4 py-2 font-medium rounded-lg gap-2 hover:bg-gray-100 transition-colors"
+          >
             <LogOut size={20} className="text-red-600" />
             <span className="text-red-600">Logout</span>
-          </button>
+          </Link>
         </div>
       </aside>
     </div>

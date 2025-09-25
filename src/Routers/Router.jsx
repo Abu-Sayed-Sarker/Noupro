@@ -11,6 +11,7 @@ import CompanyDashboard from "../Pages/Companys/CompanyDashboard";
 import ProductsGridPage from "../Pages/Companys/Components/ProductsGridPage";
 import DashboardPage from "../Pages/Dashboard/DashboardPage";
 import LoginPage from "../Pages/Auth/LoginPage";
+import UserProfile from "../Pages/User Management/UserProfile";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
       {
         path: "/users-management",
         element: <UserManagement />,
+      },
+      {
+        path: "/users-management/:id",
+        element: <UserProfile />,
       },
       {
         path: "/subscriptions",
