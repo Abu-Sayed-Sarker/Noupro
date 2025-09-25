@@ -19,6 +19,36 @@ export default function Header({ setSidebarOpen }) {
           label: "Super Admin Dashboard",
           description: "Manage business workspaces and monitor system overview",
         };
+      case pathname === "/company-management":
+        return {
+          path: false,
+          label: "Super Admin Dashboard",
+          description: "Manage business workspaces and monitor system overview",
+        };
+      case pathname === "/users-management":
+        return {
+          path: false,
+          label: "Super Admin Dashboard",
+          description: "Manage business workspaces and monitor system overview",
+        };
+      case pathname === "/subscriptions":
+        return {
+          path: false,
+          label: "Super Admin Dashboard",
+          description: "Manage business workspaces and monitor system overview",
+        };
+      case pathname === "/admin-management":
+        return {
+          path: false,
+          label: "Super Admin Dashboard",
+          description: "Manage business workspaces and monitor system overview",
+        };
+      case pathname === "/settings":
+        return {
+          path: false,
+          label: "Super Admin Dashboard",
+          description: "Manage business workspaces and monitor system overview",
+        };
       default:
         return { path: false, label: "", description: "" };
     }

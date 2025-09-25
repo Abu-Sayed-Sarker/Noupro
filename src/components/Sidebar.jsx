@@ -22,7 +22,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
     },
     { icon: Users, label: "User Management", path: "/users-management" },
     { icon: FileText, label: "Subscription", path: "/subscriptions" },
-    { icon: Calendar, label: "Admin Profile", path: "/admin-profile" },
+    { icon: Calendar, label: "Admin Management", path: "/admin-management" },
     { icon: Mail, label: "Settings", path: "/settings" },
   ];
 
