@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../Layouts/Dashboard";
 import Settings from "../Pages/Settings/Settings";
 import UserManagement from "../Pages/User Management/UserManagement";
+import SubscriptionManagement from "../Pages/Subscription/SubscriptionManagement";
+import AdminManagement from "../Pages/Admin/AdminManagement";
 
 export const router = createBrowserRouter([
   {
@@ -23,11 +25,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/subscriptions",
-        element: <h1>Subscriptions</h1>,
+        element: <SubscriptionManagement />,
       },
       {
         path: "/admin-management",
-        element: <h1>Admin Profile</h1>,
+        element: <AdminManagement />,
       },
       {
         path: "/settings",
