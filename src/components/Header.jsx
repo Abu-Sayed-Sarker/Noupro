@@ -71,7 +71,7 @@ export default function Header({ setSidebarOpen }) {
           </button>
 
           {/* Search Bar */}
-          <div className="">
+          <div className="backdrop-blur-md">
             <div className="flex items-center gap-1">
               {sidebarHeader?.path && <ChevronLeft size={28} />}
               <h1 className="text-2xl md:text-4xl font-semibold">

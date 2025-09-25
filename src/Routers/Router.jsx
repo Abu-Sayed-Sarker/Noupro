@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../Layouts/Dashboard";
 import Settings from "../Pages/Settings/Settings";
+import UserManagement from "../Pages/User Management/UserManagement";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/users-management",
-        element: <h1>Users</h1>,
+        element: <UserManagement />,
       },
       {
         path: "/subscriptions",
