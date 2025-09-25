@@ -10,16 +10,20 @@ import {
   Mail,
   Search,
 } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
+  const rootPath = useLocation().pathname.split("/")[1];
   const sidebarItems = [
     { icon: Home, label: "Dashboard", path: "/" },
-    { icon: BarChart3, label: "Analytics", path: "/analytics" },
-    { icon: Users, label: "Users", path: "/users" },
-    { icon: FileText, label: "Documents", path: "/documents" },
-    { icon: Calendar, label: "Calendar", path: "/calendar" },
-    { icon: Mail, label: "Messages", path: "/messages" },
-    { icon: Settings, label: "Settings", path: "/settings" },
+    {
+      icon: BarChart3,
+      label: "Company Management",
+      path: "/company-management",
+    },
+    { icon: Users, label: "User Management", path: "/users-management" },
+    { icon: FileText, label: "Subscription", path: "/subscriptions" },
+    { icon: Calendar, label: "Admin Profile", path: "/admin-profile" },
+    { icon: Mail, label: "Settings", path: "/settings" },
   ];
 
   return (
@@ -47,24 +51,23 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
               <NavLink
                 to={item.path}
                 key={item.label}
-                className={`flex items-center space-x-3 p-3 rounded-xl cursor-pointer transition-all duration-200 hover:bg-gray-50 group ${
-                  mounted ? "animate-fade-in-up" : "opacity-0"
-                } ${item.active ? "active" : ""}`}
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`group flex items-center px-4 py-2 font-medium rounded-lg gap-2 ${
+                  rootPath === item.path.slice(1) ? "bg-black" : "bg-white"
+                }`}
               >
                 <Icon
                   size={20}
-                  className={`transition-colors ${
-                    item.active
-                      ? "active"
-                      : "text-gray-500 group-hover:text-blue-500"
+                  className={`${
+                    rootPath === item.path.slice(1)
+                      ? "text-white"
+                      : "text-black group-hover:text-gray-800"
                   }`}
                 />
                 <span
-                  className={`font-medium transition-colors ${
-                    item.active
-                      ? "active"
-                      : "text-gray-700 group-hover:text-blue-600"
+                  className={`${
+                    rootPath === item.path.slice(1)
+                      ? "text-white"
+                      : "text-black group-hover:text-gray-800"
                   }`}
                 >
                   {item.label}
@@ -74,35 +77,6 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
           })}
         </nav>
       </aside>
-      <style>{`
-        .animate-fade-in-up {
-          animation: fade-in-up 0.6s ease-out forwards;
-        }
-        .active {
-          color: #3b82f6;
-        }
-
-        .active .text-gray-500 {
-          color: #3b82f6; /* This ensures the icon turns blue */
-        }
-
-        .active .text-gray-700 {
-          color: #3b82f6; /* This ensures the text turns blue */
-        }
-
-        .active .group-hover\:text-blue-500:hover {
-          color: #3b82f6; /* Ensures hover also respects active state */
-        }
-
-        .active .group-hover\:text-blue-600:hover {
-          color: #3b82f6; /* Ensures hover also respects active state */
-        }
-
-        .active {
-          background-color: #eff6ff; /* Blue background for active state */
-          border-right: 4px solid #3b82f6; /* Active border color */
-        }
-      `}</style>
     </div>
   );
 }

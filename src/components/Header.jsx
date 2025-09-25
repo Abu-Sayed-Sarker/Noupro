@@ -8,14 +8,19 @@ export default function Header({ setSidebarOpen }) {
   const [sidebarHeader, setSidebarHeader] = useState({
     path: false,
     label: "",
+    description: "",
   });
 
   const setSidebarHeaderContent = () => {
     switch (true) {
       case pathname === "/":
-        return { path: false, label: "Dashboard" };
+        return {
+          path: false,
+          label: "Super Admin Dashboard",
+          description: "Manage business workspaces and monitor system overview",
+        };
       default:
-        return { path: false, label: "" };
+        return { path: false, label: "", description: "" };
     }
   };
 
@@ -24,8 +29,8 @@ export default function Header({ setSidebarOpen }) {
   }, [pathname, id]);
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-30">
-      <div className="flex items-center justify-between p-4 md:py-6">
+    <header className="bg-transparent sticky top-0 z-30">
+      <div className="flex items-center justify-between p-4">
         <div className="flex items-center space-x-4">
           <button
             onClick={() => setSidebarOpen(true)}
@@ -38,8 +43,11 @@ export default function Header({ setSidebarOpen }) {
           <div className="">
             <div className="flex items-center gap-1">
               {sidebarHeader?.path && <ChevronLeft size={28} />}
-              <h1 className="text-2xl font-semibold">{sidebarHeader?.label}</h1>
+              <h1 className="text-2xl md:text-4xl font-semibold">
+                {sidebarHeader?.label}
+              </h1>
             </div>
+            <p>{sidebarHeader?.description}</p>
           </div>
         </div>
       </div>
