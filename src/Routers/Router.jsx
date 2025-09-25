@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
         element: <h1>Subscriptions</h1>,
       },
       {
-        path: "/admin-profile",
+        path: "/admin-management",
         element: <h1>Admin Profile</h1>,
       },
       {
