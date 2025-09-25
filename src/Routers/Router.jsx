@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../Layouts/Dashboard";
+import SubscriptionManagement from "../Pages/Subscription/SubscriptionManagement";
 
 export const router = createBrowserRouter([
   {
