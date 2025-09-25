@@ -1,7 +1,5 @@
-import { createBrowserRouter } from 'react-router-dom';
-import Dashboard from '../Layouts/Dashboard';
-import AdminManagement from '../Pages/Admin/AdminManagement';
-import SubscriptionManagement from '../Pages/Subscription/SubscriptionManagement';
+import { createBrowserRouter } from "react-router-dom";
+import Dashboard from "../Layouts/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -30,7 +28,7 @@ export const router = createBrowserRouter([
         element: <AdminManagement />,
       },
       {
-        path: '/settings',
+        path: "/settings",
         element: <h1>Settings</h1>,
       },
     ],

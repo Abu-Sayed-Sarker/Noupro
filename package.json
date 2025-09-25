@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.7.0",
     "framer-motion": "^12.12.1",
+    "jodit-react": "^5.2.25",
     "localforage": "^1.10.0",
     "lucide-react": "^0.511.0",
     "match-sorter": "^8.0.0",
