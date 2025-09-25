@@ -8,6 +8,7 @@ import {
   UserCog,
   Banknote,
   Settings,
+  LogOut,
 } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
@@ -86,6 +87,17 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, mounted }) {
             );
           })}
         </nav>
+
+        {/* log out  */}
+        <div className="absolute bottom-0 w-full p-4 border-t border-gray-200">
+          <Link
+            to="/login"
+            className="w-full flex items-center px-4 py-2 font-medium rounded-lg gap-2 hover:bg-gray-100 transition-colors"
+          >
+            <LogOut size={20} className="text-red-600" />
+            <span className="text-red-600">Logout</span>
+          </Link>
+        </div>
       </aside>
     </div>
   );

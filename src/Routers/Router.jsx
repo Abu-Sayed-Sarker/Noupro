@@ -9,6 +9,9 @@ import AdminManagement from "../Pages/Admin/AdminManagement";
 import CompanyManagement from "../Pages/Companys/CompanyManagement";
 import CompanyDashboard from "../Pages/Companys/CompanyDashboard";
 import ProductsGridPage from "../Pages/Companys/Components/ProductsGridPage";
+import DashboardPage from "../Pages/Dashboard/DashboardPage";
+import LoginPage from "../Pages/Auth/LoginPage";
+import UserProfile from "../Pages/User Management/UserProfile";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +21,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <h1>Main</h1>,
+        element: <DashboardPage />,
       },
       {
         path: "/company-management",
@@ -37,6 +40,10 @@ export const router = createBrowserRouter([
         element: <UserManagement />,
       },
       {
+        path: "/users-management/:id",
+        element: <UserProfile />,
+      },
+      {
         path: "/subscriptions",
         element: <SubscriptionManagement />,
       },
@@ -51,7 +58,7 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/register",
-    element: <h1>Register </h1>,
+    path: "/login",
+    element: <LoginPage />,
   },
 ]);
