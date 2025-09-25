@@ -29,7 +29,7 @@ const Dashboard = () => {
         mounted={mounted}
       />
       {/* Main Content */}
-      <div className="lg:ml-64 min-h-screen">
+      <div className="lg:ml-[270px] min-h-screen">
         {/* Header */}
         <Header setSidebarOpen={setSidebarOpen} />
         {/* Dashboard Content */}
